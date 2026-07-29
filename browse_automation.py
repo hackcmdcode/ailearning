@@ -67,7 +67,9 @@ def handle_ad_popups(page, context):
 def simulate_reading(page):
     scrolls = random.randint(2, 6)
     for _ in range(scrolls):
-        human_scroll(page, random.randint(80, 350), random.randint(200, 500))
+        lo = random.randint(80, 350)
+        hi = random.randint(200, 500)
+        human_scroll(page, min(lo, hi), max(lo, hi))
         human_delay(1.0, 3.5)
 
 
