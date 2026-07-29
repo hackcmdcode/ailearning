@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - AI Academy Support & Enquiries</title>
+  <meta name="description" content="Get in touch with the AI Academy editorial team for questions, feedback, partnerships, or content suggestions. Clean, ad-free contact page.">
+  <link rel="canonical" href="https://ai-academy-hub.com/contact.html">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us - AI Academy">
+  <meta property="og:description" content="Have questions or feedback about our AI guides? Contact the AI Academy team.">
+  <meta property="og:url" content="https://ai-academy-hub.com/contact.html">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact AI Academy",
+    "url": "https://ai-academy-hub.com/contact.html",
+    "description": "Contact form and support email for AI Academy."
+  }
+  </script>
+  <script src="https://5gvci.com/act/files/tag.min.js?z=11445764" data-cfasync="false" async></script>
+</head>
+<body>
+  <div id="reading-progress"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span>AI Academy</span>
+        <span class="logo-badge">2026</span>
+      </a>
+      
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">All Guides &#9662;</button>
+            <div class="dropdown-menu">
+              <a href="what-is-artificial-intelligence.html">1. What is AI? Guide</a>
+              <a href="machine-learning-vs-deep-learning.html">2. ML vs Deep Learning</a>
+              <a href="how-neural-networks-work.html">3. How Neural Networks Work</a>
+              <a href="what-is-a-large-language-model.html">4. What is an LLM?</a>
+              <a href="how-chatgpt-claude-gemini-work.html">5. ChatGPT, Claude, Gemini</a>
+              <a href="prompt-engineering-complete-guide.html">6. Prompt Engineering Guide</a>
+              <a href="ai-agents-explained.html">7. AI Agents Explained</a>
+              <a href="computer-vision-basics.html">8. Computer Vision Basics</a>
+              <a href="natural-language-processing-explained.html">9. NLP Explained</a>
+              <a href="generative-ai-vs-traditional-ai.html">10. Generative vs Traditional AI</a>
+              <a href="ai-ethics-and-bias.html">11. AI Ethics & Bias</a>
+              <a href="how-to-start-a-career-in-ai.html">12. AI Career Guide</a>
+              <a href="best-ai-tools-for-beginners.html">13. Best AI Tools</a>
+              <a href="ai-in-everyday-life.html">14. AI in Everyday Life</a>
+              <a href="future-of-ai-trends-to-watch.html">15. Future of AI Trends</a>
+              <a href="glossary-of-ai-terms.html">16. AI Glossary (A-Z)</a>
+              <a href="ai-robotics-and-automation.html">17. AI Robotics & Automation</a>
+            </div>
+          </li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- IMPORTANT: Clean, ad-free area around contact form as per requirement 6 & 7 -->
+  <main class="container" style="padding: 2.5rem 1.25rem 5rem;">
+    <div style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
+      <h1 class="article-title" style="margin-bottom: 0.5rem;">Get in Touch</h1>
+      <p style="color: var(--text-secondary); font-size: 1.1rem;">Have a question about our AI tutorials, feedback, or media enquiries? Fill out the form below or email us directly.</p>
+    </div>
+
+    <div class="contact-container">
+      <form id="contactForm" onsubmit="event.preventDefault(); showToast('Thank you! Your message has been sent successfully.'); this.reset();">
+        <div class="form-group">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-input" placeholder="Question about Prompt Engineering guide" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message &rarr;</button>
+      </form>
+
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); text-align: center; font-size: 0.95rem; color: var(--text-secondary);">
+        <p>Direct Email Support: <strong style="color: var(--brand-primary);">contact@ai-academy-hub.com</strong></p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">We typically respond within 24â€“48 business hours.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 AI Academy. All rights reserved. Educational static website.</p>
+        <p><a href="index.html" style="color: var(--text-secondary); text-decoration: underline;">Home</a> | <a href="sitemap.xml" style="color: var(--text-secondary); text-decoration: underline;">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- No ads loaded on contact page to maintain ad network policy compliance -->
+
+
+</body>
+</html>

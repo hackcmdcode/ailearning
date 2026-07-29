@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Neural Networks Work (Step by Step Guide 2026)</title>
+  <meta name="description" content="Step-by-step breakdown of how artificial neural networks work: neurons, layers, weights, biases, activation functions, loss, and backpropagation.">
+  <link rel="canonical" href="https://ai-academy-hub.com/how-neural-networks-work.html">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How Neural Networks Work (Step by Step)">
+  <meta property="og:description" content="An intuitive guide to the mathematics, weights, biases, and training loops behind artificial neural networks.">
+  <meta property="og:url" content="https://ai-academy-hub.com/how-neural-networks-work.html">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Neural Networks Work (Step by Step)",
+    "description": "Comprehensive explanation of artificial neural networks, forward propagation, loss optimization, and backpropagation.",
+    "author": { "@type": "Organization", "name": "AI Academy Editorial Team" },
+    "publisher": { "@type": "Organization", "name": "AI Academy" },
+    "datePublished": "2026-01-20",
+    "dateModified": "2026-07-29"
+  }
+  </script>
+  <script src="https://5gvci.com/act/files/tag.min.js?z=11445764" data-cfasync="false" async></script>
+</head>
+<body>
+  <div id="reading-progress"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span>AI Academy</span>
+        <span class="logo-badge">2026</span>
+      </a>
+      
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">All Guides &#9662;</button>
+            <div class="dropdown-menu">
+              <a href="what-is-artificial-intelligence.html">1. What is AI? Guide</a>
+              <a href="machine-learning-vs-deep-learning.html">2. ML vs Deep Learning</a>
+              <a href="how-neural-networks-work.html" class="active">3. How Neural Networks Work</a>
+              <a href="what-is-a-large-language-model.html">4. What is an LLM?</a>
+              <a href="how-chatgpt-claude-gemini-work.html">5. ChatGPT, Claude, Gemini</a>
+              <a href="prompt-engineering-complete-guide.html">6. Prompt Engineering Guide</a>
+              <a href="ai-agents-explained.html">7. AI Agents Explained</a>
+              <a href="computer-vision-basics.html">8. Computer Vision Basics</a>
+              <a href="natural-language-processing-explained.html">9. NLP Explained</a>
+              <a href="generative-ai-vs-traditional-ai.html">10. Generative vs Traditional AI</a>
+              <a href="ai-ethics-and-bias.html">11. AI Ethics & Bias</a>
+              <a href="how-to-start-a-career-in-ai.html">12. AI Career Guide</a>
+              <a href="best-ai-tools-for-beginners.html">13. Best AI Tools</a>
+              <a href="ai-in-everyday-life.html">14. AI in Everyday Life</a>
+              <a href="future-of-ai-trends-to-watch.html">15. Future of AI Trends</a>
+              <a href="glossary-of-ai-terms.html">16. AI Glossary (A-Z)</a>
+              <a href="ai-robotics-and-automation.html">17. AI Robotics & Automation</a>
+            </div>
+          </li>
+        </ul>
+        <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="ad-slot ad-banner-top" id="ad-slot-top" data-ad-zone="ZONE_BANNER_TOP">
+        <script async="async" data-cfasync="false" src="https://al5sm.com/tag.min.js" data-zone="11445763" data-format="inpage"></script>
+      </div>
+  </div>
+
+  <main class="container article-layout">
+    <article class="article-main">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> &rsaquo; <a href="index.html">Guides</a> &rsaquo; <span>Neural Networks</span>
+      </nav>
+
+      <header class="article-header">
+        <h1 class="article-title">How Neural Networks Work (Step by Step)</h1>
+        <div class="article-meta">
+          <span class="article-author">&#128100; AI Academy Editorial Team</span>
+          <span>&#128197; Updated July 2026</span>
+          <span>&#9201; 15 min read</span>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <p>Artificial Neural Networks (ANNs) form the computational backbone of modern AI. From recognizing objects in <a href="computer-vision-basics.html">Computer Vision Systems</a> to generating human text in <a href="what-is-a-large-language-model.html">Large Language Models</a>, neural networks process complex input data through layered mathematical transformations.</p>
+
+        <p>If you're new to the core concepts, start with our <a href="machine-learning-vs-deep-learning.html">Machine Learning vs Deep Learning comparison</a> first.</p>
+<h2 id="anatomy">Anatomy of an Artificial Neuron (Perceptron)</h2>
+        <p>An artificial neuron receives numerical inputs, applies mathematical weights and a bias term, and passes the result through a non-linear activation function:</p>
+
+        <pre><code>z = (w1 * x1) + (w2 * x2) + ... + (wn * xn) + bias
+output = activation_function(z)</code></pre>
+
+        <ul>
+          <li><strong>Inputs (x):</strong> Numerical features passed into the node.</li>
+          <li><strong>Weights (w):</strong> Multipliers representing the relative importance or strength of each input connection.</li>
+          <li><strong>Bias (b):</strong> An additive offset parameter enabling the node to shift its activation threshold.</li>
+          <li><strong>Activation Function:</strong> A mathematical formula (such as ReLU, Sigmoid, or GELU) introducing non-linearity so the network can model complex non-linear patterns.</li>
+        </ul>
+
+        <h2 id="network-layers">The Three Layers of a Neural Network</h2>
+        <p>Neurons are organized sequentially into three types of layers:</p>
+        <ol>
+          <li><strong>Input Layer:</strong> Receives raw feature vectors (pixel values, token embeddings).</li>
+          <li><strong>Hidden Layers:</strong> Deep internal layers that extract abstract features (edges &rarr; shapes &rarr; full objects).</li>
+          <li><strong>Output Layer:</strong> Produces the final prediction (probability scores, classification labels, or generated tokens).</li>
+        </ol>
+<h2 id="training-process">The Four-Step Training Loop</h2>
+        <p>How does a raw neural network with random weights learn to make accurate predictions? Through an iterative four-step training loop:</p>
+
+        <div class="callout">
+          <div class="callout-title">&#128161; Step 1: Forward Propagation</div>
+          <p>Data flows forward from input layer through hidden layers to produce an initial prediction vector.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">&#127919; Step 2: Loss Calculation</div>
+          <p>A loss function compares the network's prediction against ground-truth labels to calculate a numeric error penalty.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">&#128260; Step 3: Backpropagation</div>
+          <p>Using calculus (chain rule), error gradients are calculated backward through the network to determine how much each weight contributed to the mistake.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">&#9881;&#65039; Step 4: Gradient Descent (Weight Update)</div>
+          <p>An optimizer algorithm (such as Adam or SGD) nudges weights in the direction that minimizes total loss for future passes.</p>
+        </div>
+<h2 id="architectures">Key Neural Network Architectures</h2>
+        <p>Different tasks require distinct neural network designs:</p>
+        <ul>
+          <li><strong>Feedforward Neural Networks (FNN):</strong> Simple fully-connected architectures for structured data.</li>
+          <li><strong>Convolutional Neural Networks (CNN):</strong> Designed for spatial grid data such as images and video frames.</li>
+          <li><strong>Transformers:</strong> Self-attention network architectures powering frontier models like <a href="how-chatgpt-claude-gemini-work.html">ChatGPT, Claude, and Gemini</a>.</li>
+        </ul>
+
+        <!-- Social Share Bar -->
+        <div class="share-bar">
+          <span class="share-label">Share this guide:</span>
+          <a href="https://twitter.com/intent/tweet?text=How%20Neural%20Networks%20Work%20Step%20by%20Step&url=https://ai-academy-hub.com/how-neural-networks-work.html" target="_blank" rel="noopener" class="share-btn">&#128038; Twitter/X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ai-academy-hub.com/how-neural-networks-work.html" target="_blank" rel="noopener" class="share-btn">&#128188; LinkedIn</a>
+          <a href="https://api.whatsapp.com/send?text=How%20Neural%20Networks%20Work%20Guide%20https://ai-academy-hub.com/how-neural-networks-work.html" target="_blank" rel="noopener" class="share-btn">&#128172; WhatsApp</a>
+          <button class="share-btn" data-share="copy">&#128203; Copy Link</button>
+        </div>
+
+        <div class="continue-reading-box">
+          <div class="continue-info">
+            <span class="continue-label">Next Guide in Sequence</span>
+            <span class="continue-title">4. What is a Large Language Model (LLM)?</span>
+          </div>
+          <a href="what-is-a-large-language-model.html" class="continue-btn">Continue Reading &rarr;</a>
+        </div>
+<section class="related-section">
+          <h3 class="related-title">Related AI Guides</h3>
+          <div class="articles-grid">
+            <a href="machine-learning-vs-deep-learning.html" class="card">
+              <div class="card-header"><span class="card-tag">Core Concepts</span></div>
+              <div class="card-body">
+                <h4 class="card-title">ML vs Deep Learning</h4>
+                <p class="card-desc">Compare classical algorithms with deep multi-layered neural networks.</p>
+              </div>
+            </a>
+            <a href="what-is-a-large-language-model.html" class="card">
+              <div class="card-header"><span class="card-tag">LLMs</span></div>
+              <div class="card-body">
+                <h4 class="card-title">What is an LLM?</h4>
+                <p class="card-desc">Understand how transformer neural networks process and generate human language.</p>
+              </div>
+            </a>
+            <a href="computer-vision-basics.html" class="card">
+              <div class="card-header"><span class="card-tag">Vision</span></div>
+              <div class="card-body">
+                <h4 class="card-title">Computer Vision Basics</h4>
+                <p class="card-desc">How CNNs analyze pixels and detect visual features in images.</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3 class="widget-title">Table of Contents</h3>
+        <ul class="toc-list">
+          <li><a href="#anatomy">Anatomy of a Neuron</a></li>
+          <li><a href="#network-layers">Three Network Layers</a></li>
+          <li><a href="#training-process">4-Step Training Loop</a></li>
+          <li><a href="#architectures">Key Architectures</a></li>
+        </ul>
+      </div>
+</aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 AI Academy. All rights reserved. Educational static website.</p>
+        <p><a href="about.html" style="color: var(--text-secondary); text-decoration: underline;">About</a> | <a href="contact.html" style="color: var(--text-secondary); text-decoration: underline;">Contact</a> | <a href="sitemap.xml" style="color: var(--text-secondary); text-decoration: underline;">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="ads.js"></script>
+
+
+</body>
+</html>
