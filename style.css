@@ -1007,3 +1007,75 @@ tr:nth-child(even) {
   }
 }
 
+/* Monetag OnClick — Magnificent Tag */
+.monetag-onclick-trigger {
+  display: block;
+  width: 100%;
+  min-height: 90px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.monetag-onclick-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--brand-primary);
+}
+
+.monetag-onclick-trigger:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.monetag-onclick-trigger::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.03) 10px,
+    rgba(255, 255, 255, 0.03) 20px
+  );
+  pointer-events: none;
+}
+
+.monetag-ad-push {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem auto;
+  max-width: 760px;
+  transition: all 0.2s ease;
+}
+
+.monetag-ad-push:hover {
+  border-color: var(--brand-primary) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.monetag-ad-push::before {
+  content: 'Click for AI Tools & Updates';
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
