@@ -4,7 +4,7 @@
   Active Zones:
     11445764  push   → 5gvci.com  (Push Notification opt-in, in <head>)
     11445763  inpage → al5sm.com  (In-Page Push banner, inside .ad-slot divs only)
-    11445753  sw     → 3nbf4.com  (Service Worker, sw.js)
+    11454764  sw     → 3nbf4.com  (Service Worker, sw.js)
 
   NO popunder / no page-wide click zones.
   Ads only fire inside .ad-slot containers.
